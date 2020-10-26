@@ -16,13 +16,12 @@ function App() {
   let buttonCollection = useRef(null)
 
   useEffect(()=>{
-    console.log(heading, heading2)
     TweenMax.to(
       heading,
-      .8,
+      .9,
       {
         opacity: 1,
-        y: 10,
+        y: 15,
         ease: Power3.easeOut
       }
     )
@@ -31,9 +30,9 @@ function App() {
       .8,
       {
         opacity: 1,
-        y: 15,
+        y: 20,
         ease: Power3.easeOut,
-        delay: .8
+        delay: .9
       }
     )
     TweenMax.to(
@@ -41,14 +40,13 @@ function App() {
       .8,
       {
         opacity: 1,
-        y: -15,
+        y: -35,
         ease: Power3.easeOut,
-        delay: 1.6
+        delay: 1.8
       }
     )
-  }, [])
+  })
 
-  // console.log(heading)
   return (
     <div className="App">
       <NavBar/>	
