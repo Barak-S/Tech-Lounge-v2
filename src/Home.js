@@ -39,16 +39,15 @@ const Home = () => {
             duration: 0,
             background: `url(${city}) center center`
         });
-        TweenMax.to(home, {
-            duration: 0.4,
-            opacity: 1,
-            ease: "power3.inOut"
-        });
-        TweenMax.from(home, {
-            duration: 0.4,
-            skewY: 2,
-            transformOrigin: "right top"
-        });
+        // TweenMax.to(home, {
+        //     duration: 0.4,
+        //     opacity: 1,
+        //     ease: "power3.inOut"
+        // });
+        // TweenMax.from(home, {
+        //     duration: 0.4,
+        //     transformOrigin: "right top"
+        // });
         
     }
   
