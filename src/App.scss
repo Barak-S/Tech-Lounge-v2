@@ -30,7 +30,7 @@ body {
 	span {
 	cursor: pointer;
 	&:first-child {
-		margin-left: 50px;
+		margin-left: 45px;
 	}
 	font-weight: 400;
 	margin: 0 22px;
@@ -38,7 +38,7 @@ body {
 	&:hover {
 		color: #fff;
 		background: $black;
-		padding: 8px 24px;
+		padding: 8px 20px;
 		border-radius: 4px;
 	}
 	}
@@ -48,8 +48,10 @@ a.nav-link {
 	font-size: 20px;
 	font-weight: 500;
 	text-decoration: none;
-	margin-left: 40px;
-	margin-right: 40px;
+	// margin-left: 40px;
+	// margin-right: 40px;
+	// padding-left: 40px;
+	// padding-right: 40px;
 	transition: 0.4s ease-in-out;
 	&:hover{
 		color: #fff;
@@ -62,9 +64,12 @@ a.nav-link {
 nav.navbar.navbar-expand-lg.navbar-light{
 	position: fixed;
 	align-items: center;
-	width: 100%;
+	width: 90%;
 	z-index: 2;
-	
+	left: 50%;
+	transform: translate(-50%, 0);
+	justify-content: space-between;
+
 }
 
 .align-auto{
