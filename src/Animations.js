@@ -72,6 +72,7 @@ export const handleHoverExit = e => {
 
 // adds city image once you hover on
 export const handleCity = (city, target) => {
+    console.log(city,target)
   gsap.to(target, {
     duration: 0,
     background: `url(${city}) center center`

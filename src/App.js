@@ -1,90 +1,94 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef, useEffect, useState } from "react";
+import { gsap } from "gsap";
 import "./App.scss";
-import { TweenMax, Power3 }  from 'gsap';
+import { TweenMax, TweenLite, Power3 }  from 'gsap';
 import Header from "./Header";
 
+import newyork from "./images/newyork.webp";
+import telaviv from "./images/telaviv.jpeg"
+
+import {
+  staggerText,
+  staggerReveal,
+  fadeInUp,
+  handleHover,
+  handleHoverExit,
+  handleCityReturn,
+  handleCity,
+  staggerRevealClose
+} from "./Animations";
+
+
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Table } from "react-bootstrap";
 
 function App() {
 
   return (
     <Router>
       <div className="App">
-        <Header />
-        <div className="container">
-          <div className="wrapper">
-            <div className="home">
               <Switch>
                 <Route exact path="/" component={Home} />
-                <Route exact path="/furniture" component={Opportunities} />
-                <Route exact path="/accessories" component={Solutions} />
-                <Route exact path="/contact" component={Contact} />
-                <Route exact path="/blog" component={Blog} />
               </Switch>
-            </div>
-          </div>
-        </div>
       </div>
     </Router>
   );
 }
 
-function Opportunities() {
-  return <p>Discover our numerous opportunities</p>;
-}
 
-function Solutions() {
-  return <p>Solutions that help you.</p>;
-}
+const cities = [
+  { name: "New York", image: newyork },
+  { name: "Tel Aviv", image: telaviv }
+];
 
-function Contact() {
-  return <p>Feel free to reach us.</p>;
-}
-function Blog() {
-  return <p>This is our Blog page.</p>;
-}
+const Home = () => {
+  let img = useRef(null);
 
-function Home() {
-  let buttonCollection = useRef(null)
+  // useEffect(()=>{
+  //   console.log(img)
+  //   TweenMax.to(
+  //     img, {
+  //       duration: 0.4,
+  //       opacity: 1,
+  //       ease: "power3.inOut"
+  //     }
+  //   )
+  //   TweenMax.from(
+  //     img, {
+  //       duration: 0.4,
+  //       skewY: 2,
+  //       transformOrigin: "right top"
+  //     }
+  //   )
+  // }, [])
 
-  useEffect(()=>{
-    TweenMax.to(
-      buttonCollection,
-      .8,
-      {
-        opacity: 1,
-        y: -35,
-        ease: Power3.easeOut,
-        delay: 0.5
-      }
-    )
-  })
   return (
-    <div className="container">
-      <div className="wrapper">
-        <h5>
-          The <b style={{color:"rgb(100,124,187)"}}>Tech Lounge</b> | Update your work atmosphere.
-          <br/>
-          Improve your productivity.
-        </h5>
-        <div class="cta">
-          <Link to="/furniture">
-            <button 
-              ref={el => {buttonCollection = el}} 
-              class="cta-add"
-            >View Collection
-            </button>
-          </Link>
+    <div>
+      <img ref={el => (img = el)} src={telaviv}/>
+      <div style={{position: "absolute", top: "50%"}}>
+        <h3>Our Mission</h3>
+          <p>
+          With attention to detail, we continue to shape the future of the tech industry.
+          </p>
+        <div className='locations'>
+          Locations:
+          {cities.map(el => (
+            <span
+            key={el.name}>
+              {el.name}
+            </span>
+          ))}
         </div>
       </div>
     </div>
   );
-}
+};
+
 export default App;
 
 
 // import React, { useEffect, useRef } from 'react'
-// import './App.css';
+// import './App.scss';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import NavBar from './NavBar'
 // // import { Col, Row, Card } from 'react-bootstrap';
@@ -157,10 +161,10 @@ export default App;
 //               </div>
 //             </div>
 //       </div>		
-// 			<img class="big-circle" src={Beclipse} alt="" />
+// 			{/* <img class="big-circle" src={Beclipse} alt="" />
 // 			<img class="medium-circle" src={Meclipse} alt="" />
 // 			<img class="small-circle" src={Seclipse} alt="" />
-      
+//        */}
 //     </div>
 //   );
 // }

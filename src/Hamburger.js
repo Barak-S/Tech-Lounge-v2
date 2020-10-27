@@ -114,7 +114,7 @@ const Hamburger = ({ state }) => {
               <div ref={el => (info = el)} className='info'>
               <h3>Our Mission</h3>
                 <p>
-                With attention to detail, I take ideas, deliver quickly and consistently, and build things that provide a lot of value in a short amount of time.
+                With attention to detail, we continue to shape the future of the tech industry.
                 </p>
               </div>
               <div className='locations'>
