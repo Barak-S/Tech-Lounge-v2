@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import React from 'react';
+import { Navbar, Nav } from 'react-bootstrap';
 // import { Link, withRouter } from "react-router-dom";
 
 class NavBar extends React.Component {
