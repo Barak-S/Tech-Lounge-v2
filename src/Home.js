@@ -45,9 +45,9 @@ const Home = () => {
     return (
       <div ref={el => (home = el)}className="home">
         <div style={{position: "absolute", top: "50%"}}>
-            <Row>
+            
                 <Col xs={12} sm={12} md={8} lg={8} className="align-auto">
-                    <h2 style={{ color: "rgb(100,124,187)"}}>Our Mission</h2>
+                    <h2 style={{ color: "rgb(100,124,187)", fontWeight: "500"}}>Our Mission</h2>
                     <p style={{color: "#ffffff"}}>
                     With attention to detail, we continue to shape the future of the tech industry.
                     </p>
@@ -63,7 +63,7 @@ const Home = () => {
                     ))}
                     </div>
                 </Col>
-            </Row>
+            
 
         </div>
       </div>
