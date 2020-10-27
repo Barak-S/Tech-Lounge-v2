@@ -12,16 +12,16 @@ class NavBar extends React.Component {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="justify-content-center" style={{ flex: 1}}>
                         <Nav.Item>
-                            <Nav.Link style={{  color: "rgb(100,124,187)"}} href="/home">Furniture</Nav.Link>
+                            <Nav.Link style={{  color: "rgb(100,124,187)"}} href="/">Collection</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link style={{  color: "rgb(100,124,187)"}} href="/home">Accessories</Nav.Link>
+                            <Nav.Link style={{  color: "rgb(100,124,187)"}} href="/">About</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link style={{  color: "rgb(100,124,187)"}} href="/home">Contact</Nav.Link>
+                            <Nav.Link style={{  color: "rgb(100,124,187)"}} href="/">Contact</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link style={{  color: "rgb(100,124,187)"}} href="/home">Blog</Nav.Link>
+                            <Nav.Link style={{  color: "rgb(100,124,187)"}} href="/">Blog</Nav.Link>
                         </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>
