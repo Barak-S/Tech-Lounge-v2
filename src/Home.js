@@ -4,16 +4,22 @@ import "./App.scss";
 import { TweenMax, TweenLite, Power3 }  from 'gsap';
 import { Row, Col } from 'react-bootstrap';
 
-import newyork from "./images/nyc.jpeg";
+import newyork from "./images/newyork.webp";
+import newyork2 from "./images/nyc.jpeg";
 import telaviv from "./images/telaviv.jpeg"
 
 
-const cities = [
-    { name: "New York", image: newyork },
-    { name: "Tel Aviv", image: telaviv }
-  ];
-  
 const Home = () => {
+
+    const [timeOfDay, setTimeOfDay] = useState(false)
+    
+    let nightTime = timeOfDay === false ? newyork : newyork2
+    
+    let cities = [
+        { name: "New York", image: nightTime },
+        { name: "Tel Aviv", image: telaviv }
+      ];
+
 
     let home = useRef(null);
     let app = useRef(null)
@@ -24,7 +30,11 @@ const Home = () => {
     }, [])
 
     const handleCity = (city) => {
-        console.log(city)
+        if (city === "/static/media/newyork.824150ab.webp"){
+            setTimeOfDay(true)
+        } else if (city === '/static/media/nyc.13789085.jpeg'){
+            setTimeOfDay(false)
+        }
         TweenMax.to(home, {
             duration: 0,
             background: `url(${city}) center center`
