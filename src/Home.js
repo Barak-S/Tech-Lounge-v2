@@ -25,7 +25,7 @@ const Home = () => {
 
     useEffect(()=>{
       TweenMax.to( home, 0, {css: {visibility: 'visible'}})
-      TweenMax.fromTo( home, 1.2,{ opacity: 0, y: 50 },{ opacity: 1, y: 0 })
+      TweenMax.fromTo( home, 1.2,{ opacity: 0 },{ opacity: 1 })
     }, [])
 
     const handleCity = (city) => {
