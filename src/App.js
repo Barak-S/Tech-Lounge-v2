@@ -5,6 +5,7 @@ import Home from './Home'
 import NavBar from './NavBar'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Footer from './Footer'
+import Cart from './Cart'
 
 function App() {
 
@@ -14,8 +15,9 @@ function App() {
         <NavBar/>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/cart" component={Cart} />
         </Switch>
-        {/* <Footer/> */}
+        <Footer/>
       </div>
     </Router>
   );

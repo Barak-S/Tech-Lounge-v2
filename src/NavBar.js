@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar, Nav, Col } from 'react-bootstrap';
 // import { Link, withRouter } from "react-router-dom";
 import { gsap } from "gsap";
+import shoppingCart from './images/cart.svg'
 
 class NavBar extends React.Component {
 
@@ -22,8 +23,10 @@ class NavBar extends React.Component {
                         <Nav.Item>
                             <Nav.Link style={{color: "#fff"}} href="/">Contact</Nav.Link>
                         </Nav.Item>
+                    </Nav>
+                    <Nav className="ml-auto">
                         <Nav.Item>
-                            <Nav.Link style={{color: "#fff"}} href="/">Blog</Nav.Link>
+                            <Nav.Link style={{color: "#fff"}} href="/cart"><img src={shoppingCart} style={{height: 25, width: 25}}/></Nav.Link>
                         </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>
