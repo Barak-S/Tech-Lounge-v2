@@ -3,7 +3,8 @@ import { gsap } from "gsap";
 import "./App.scss";
 import { TweenMax, TweenLite, Power3 }  from 'gsap';
 import { Row, Col } from 'react-bootstrap';
-import Products from './Poducts'
+import Products from './Products'
+import Collection from './Collection'
 import newyork from "./images/newyork.webp";
 import newyork2 from "./images/nyc.jpeg";
 import telaviv from "./images/telaviv.jpeg"
@@ -47,7 +48,7 @@ const Home = () => {
             <Col xs={12} sm={12} md={8} lg={8} className="align-auto">
                 <h2 style={{ color: "#ffffff", fontWeight: "500"}}>Our Mission</h2>
                 <p style={{color: "#ffffff"}}>
-                With attention to detail, we continue to shape the future of the tech industry.
+                    With attention to detail, we continue to shape the future of the tech industry.
                 </p>
                 <div className='locations'>
                 Locations:
@@ -64,6 +65,7 @@ const Home = () => {
         </div>
       </div>
       <Products/>
+      <Collection/>
     </div>
     );
 };

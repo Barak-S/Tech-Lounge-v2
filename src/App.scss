@@ -2,6 +2,7 @@
 
 $blue: rgb(100,124,187);
 $black: #191919;
+$white: #F4F5F5;
 
 html,
 body {
@@ -116,6 +117,10 @@ nav.navbar.navbar-expand-lg.navbar-light{
 	background-repeat: no-repeat !important;
 	background-color: $blue;
 	background-image: url('images/office2.jpeg');
+}
 
+.collection{
+	height: 100vh;	
+	background-color: $white;
 }
 
