@@ -8,7 +8,7 @@ class Cart extends Component {
                 <div style={{paddingTop: "10vh"}}>
                         <Col xs={12} sm={12} md={10} lg={10} className="align-auto">
                             <h2>Shopping Cart</h2>
-                            <Table striped bordered hover>
+                            <Table striped bordered hover resposive>
                                 <thead style={{fontSize: 11}}>
                                     <tr>
                                     <th>Products</th>
