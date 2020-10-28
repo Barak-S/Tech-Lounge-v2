@@ -3,11 +3,10 @@ import { gsap } from "gsap";
 import "./App.scss";
 import { TweenMax, TweenLite, Power3 }  from 'gsap';
 import { Row, Col } from 'react-bootstrap';
-
+import Products from './Poducts'
 import newyork from "./images/newyork.webp";
 import newyork2 from "./images/nyc.jpeg";
 import telaviv from "./images/telaviv.jpeg"
-
 
 const Home = () => {
 
@@ -38,44 +37,34 @@ const Home = () => {
         TweenMax.to(home, {
             duration: 0,
             background: `url(${city}) center center`
-        });
-        // TweenMax.to(home, {
-        //     duration: 0.4,
-        //     opacity: 1,
-        //     ease: "power3.inOut"
-        // });
-        // TweenMax.from(home, {
-        //     duration: 0.4,
-        //     transformOrigin: "right top"
-        // });
-        
+        });        
     }
   
     return (
+    <div>
       <div ref={el => (home = el)}className="home">
         <div style={{position: "absolute", top: "50%"}}>
-            
-                <Col xs={12} sm={12} md={8} lg={8} className="align-auto">
-                    <h2 style={{ color: "rgb(100,124,187)", fontWeight: "500"}}>Our Mission</h2>
-                    <p style={{color: "#ffffff"}}>
-                    With attention to detail, we continue to shape the future of the tech industry.
-                    </p>
-                    <div className='locations'>
-                    Locations:
-                    {cities.map(el => (
-                        <span
-                        key={el.name}
-                        onClick={()=>handleCity(el.image)}
-                        >
-                        {el.name}
-                        </span>
-                    ))}
-                    </div>
-                </Col>
-            
-
+            <Col xs={12} sm={12} md={8} lg={8} className="align-auto">
+                <h2 style={{ color: "#ffffff", fontWeight: "500"}}>Our Mission</h2>
+                <p style={{color: "#ffffff"}}>
+                With attention to detail, we continue to shape the future of the tech industry.
+                </p>
+                <div className='locations'>
+                Locations:
+                {cities.map(el => (
+                    <span
+                    key={el.name}
+                    onClick={()=>handleCity(el.image)}
+                    >
+                    {el.name}
+                    </span>
+                ))}
+                </div>
+            </Col>
         </div>
       </div>
+      <Products/>
+    </div>
     );
 };
   

@@ -109,8 +109,13 @@ nav.navbar.navbar-expand-lg.navbar-light{
 	animation-direction: both;
 }
 
-// .align-auto .col-lg-8 .col-md-8 .col-sm-12 .col-12{
-// 	padding-right: 0px;
-// 	margin-right: 0px;
-// }
+.products{
+	height: 100vh;
+	width: 100%;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+	background-color: $blue;
+	background-image: url('images/office2.jpeg');
+
+}
 
