@@ -1,13 +1,12 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
-import "./App.scss";
 import { TweenMax, TweenLite, Power3 }  from 'gsap';
 import { Row, Col } from 'react-bootstrap';
 import Products from './Products'
 import Collection from './Collection'
-import newyork from "./images/newyork.webp";
-import newyork2 from "./images/nyc.jpeg";
-import telaviv from "./images/telaviv.jpeg"
+import newyork from "../images/newyork.webp";
+import newyork2 from "../images/nyc.jpeg";
+import telaviv from "../images/telaviv.jpeg"
 
 const Home = () => {
 

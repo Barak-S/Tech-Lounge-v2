@@ -1,11 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { gsap } from "gsap";
 import "./App.scss";
-import Home from './Home'
-import NavBar from './NavBar'
+import Home from './containers/Home'
+import NavBar from './containers/NavBar'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Footer from './Footer'
-import Cart from './Cart'
+import Footer from './containers/Footer'
+import Cart from './containers/Cart'
 
 function App() {
 

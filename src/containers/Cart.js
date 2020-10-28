@@ -23,12 +23,14 @@ class Cart extends Component {
                                         <td>$9,500.00</td>
                                     </tr>
                                     <tr>
-                                        <td>"Hello World" sign"</td>
+                                        <td>"Hello World" sign</td>
                                         <td>2</td>
                                         <td>$34.99</td>
                                     </tr>
                                 </tbody>
                             </Table>
+                            <hr/>
+                            <h4 style={{float: "right", marginRight: 25}}>Total: $9,534.99</h4>
                         </Col>
 
                 </div>
