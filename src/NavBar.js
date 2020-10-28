@@ -8,7 +8,7 @@ class NavBar extends React.Component {
     render(){
 
         return (
-            <Navbar inverse collapseOnSelect expand="lg">
+            <Navbar inverse collapseOnSelect expand="lg" style={{  backdropFilter: "blur(6px)"}}>
                 <Navbar.Brand href="/" style={{fontWeight: "700", color: "#191919"}}>Tech Lounge</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
