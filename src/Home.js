@@ -64,8 +64,8 @@ const Home = () => {
             </Col>
         </div>
       </div>
-      <Products/>
-      <Collection/>
+      {/* <Products/>
+      <Collection/> */}
     </div>
     );
 };
