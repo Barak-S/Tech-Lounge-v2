@@ -5,10 +5,8 @@ import { gsap } from "gsap";
 
 const Poducts = () => {
 
-  let bg = useRef(null)
-
   return (
-    <div ref={el => (bg = el)} className="products">
+    <div className="products">
       <div style={{position: "absolute", top: "115%"}}>
           <Col xs={12} sm={12} md={8} lg={8} className="align-auto">
               <h2 style={{ color: "#fff", fontWeight: "600"}}>Update you work environment.</h2>

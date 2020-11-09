@@ -61,7 +61,6 @@ nav.navbar.navbar-expand-lg.navbar-light{
 	transform: translate(-50%, 0);
 	justify-content: space-between;
 	backdrop-filter: blur(6px);
-
 }
 
 .align-auto{
@@ -71,7 +70,7 @@ nav.navbar.navbar-expand-lg.navbar-light{
 
 @keyframes backgroundEffect {
   0% {
-    background-position: 0% 0%;
+	background-position: 0% 0%;
   }
   25% {
     background-position: 40% 10%;
@@ -83,7 +82,7 @@ nav.navbar.navbar-expand-lg.navbar-light{
     background-position: 10% 40%;
   }
   100% {
-    background-position: 0% 0%;
+	background-position: 0% 0%;
   }
 }
 
@@ -99,6 +98,10 @@ nav.navbar.navbar-expand-lg.navbar-light{
 	animation-duration: 30s;
 	animation-iteration-count: infinite;
 	animation-direction: both;
+}
+
+.fadeIn{
+	opacity: 0;
 }
 
 .products{
