@@ -121,7 +121,7 @@ const Home = () => {
         <div ref={sectionRef} className="fadeIn">
             <div className="products">
                 <div style={{position: "absolute"}}>
-                    <Col xs={12} sm={12} md={8} lg={8} className="align-auto">
+                    <Col xs={12} sm={12} md={8} lg={8} className="align-auto" style={{marginTop: "25%"}}>
                         <h2 style={{ color: "#fff", fontWeight: "600"}}>Update you work environment.</h2>
                         <br/>
                         <h2 style={{ color: "#fff", fontWeight: "600"}}>Enhance your productivity.</h2>
@@ -131,8 +131,8 @@ const Home = () => {
         </div>
       
         <div className="collection">
-            <div style={{position: "absolute", top: "215%"}}>
-                <Col xs={12} sm={12} md={6} lg={6} className="align-auto">
+            <div style={{position: "absolute"}}>
+                <Col xs={12} sm={12} md={6} lg={6} className="align-auto" style={{marginTop: "25%"}}>
                     <h2 style={{ color: "#64647E", fontWeight: "600"}}>Update you work environment.</h2>
                     <br/>
                     <h2 style={{ color: "#64647E", fontWeight: "600"}}>Enhance your productivity.</h2>
