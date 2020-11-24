@@ -1,9 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
 import { gsap, TweenMax, TweenLite, Power3 }  from 'gsap';
-import { Col } from 'react-bootstrap';
+import { Col, Form, Button } from 'react-bootstrap';
 import newyork from "../images/newyork.webp";
 import newyork2 from "../images/nyc.jpeg";
 import telaviv from "../images/telaviv.jpeg"
+import emailSvg from '../images/undraw_subscriber.svg'
 import { useIntersection } from "react-use";
 
 
@@ -14,7 +15,6 @@ const Home = () => {
     let heading2 = useRef(null)
     let heading3 = useRef(null)
     let home = useRef(null);
-    let app = useRef(null)
 
     const intersection = useIntersection(sectionRef, {
         root: null,
@@ -47,39 +47,39 @@ const Home = () => {
         { name: "Tel Aviv", image: telaviv }
       ];
 
-    useEffect(()=>{
-      TweenMax.to( home, 0, {css: {visibility: 'visible'}})
-      TweenMax.to(
-        heading,
-        1,
-        {
-          opacity: 1,
-          y: 10,
-          ease: Power3.easeOut,
-          delay: 1
-        }
-      )
-      TweenMax.to(
-        heading2,
-        .8,
-        {
-          opacity: 1,
-          y: 15,
-          ease: Power3.easeOut,
-          delay: 2
-        }
-      )
-      TweenMax.to(
-        heading3,
-        .8,
-        {
-          opacity: 1,
-          y: 15,
-          ease: Power3.easeOut,
-          delay: 3
-        }
-      )
-      TweenMax.fromTo( home, 1.2,{ opacity: 0 },{ opacity: 1 })
+    useEffect(()=>{        
+        TweenMax.to( home, 0, {css: {visibility: 'visible'}})
+        TweenMax.to(
+            heading,
+            1,
+            {
+            opacity: 1,
+            y: 10,
+            ease: Power3.easeOut,
+            delay: 1
+            }
+        )
+        TweenMax.to(
+            heading2,
+            .8,
+            {
+            opacity: 1,
+            y: 15,
+            ease: Power3.easeOut,
+            delay: 2
+            }
+        )
+        TweenMax.to(
+            heading3,
+            .8,
+            {
+            opacity: 1,
+            y: 15,
+            ease: Power3.easeOut,
+            delay: 3
+            }
+        )
+        TweenMax.fromTo( home, 1.2,{ opacity: 0 },{ opacity: 1 })
     }, [])
 
     const handleCity = (city) => {
@@ -131,13 +131,25 @@ const Home = () => {
         </div>
       
         <div className="collection">
-            <div style={{position: "absolute"}}>
-                <Col xs={12} sm={12} md={6} lg={6} className="align-auto" style={{marginTop: "25%"}}>
-                    <h2 style={{ color: "#64647E", fontWeight: "600"}}>Update you work environment.</h2>
-                    <br/>
-                    <h2 style={{ color: "#64647E", fontWeight: "600"}}>Enhance your productivity.</h2>
-                    <br/>
-                    <h2 style={{ color: "#64647E", fontWeight: "600"}}>Partner with the World’s Best Brands.</h2>
+            <div style={{textAlign: "center"}}>
+                <Col xs={12} sm={12} md={6} lg={6} className="align-auto" style={{paddingTop: '5rem'}}>
+                    <h1 style={{ color: "#575A89", fontWeight: "600"}}>Lets's work together</h1>
+                    <Form style={{padding:'1rem', textAlign: "left"}}>
+                        <Form.Group controlId="formBasicPassword">
+                            <Form.Label>Subject</Form.Label>
+                            <Form.Control type="text" placeholder="Subject" />
+                        </Form.Group>
+                        <Form.Group >
+                            <Form.Label>Message: </Form.Label>
+                            <Form.Control as="textarea" rows={3} />
+                        </Form.Group>
+                    </Form>
+                    <Button type="submit" style={{backgroundColor: "#57B894", border: "none", fontWeight: "600"}}>
+                        Submit
+                    </Button>
+                </Col>
+                <Col>
+                    <img src={emailSvg} style={{height: 300, width: "100%" }}></img>
                 </Col>
             </div>
         </div>
