@@ -119,12 +119,12 @@ const Home = () => {
         </div>
 
         <div ref={sectionRef} className="fadeIn">
-            <div className="products">
-                <div style={{position: "absolute"}}>
-                    <Col xs={12} sm={12} md={8} lg={8} className="align-auto" style={{marginTop: "25%"}}>
-                        <h2 style={{ color: "#fff", fontWeight: "600"}}>Update you work environment.</h2>
+            <div className="products" style={{textAlign: "center"}}>
+                <div >
+                    <Col xs={12} sm={12} md={6} lg={6} className="align-auto" style={{paddingTop: '5rem'}}>
+                        <h1 style={{ color: "#F4F5F5", fontWeight: "600"}}>Update you online presence.</h1>
                         <br/>
-                        <h2 style={{ color: "#fff", fontWeight: "600"}}>Enhance your productivity.</h2>
+                        <h2 style={{ color: "#F4F5F5", fontWeight: "600"}}>Enhance your productivity.</h2>
                     </Col>
                 </div>
             </div>
@@ -149,7 +149,7 @@ const Home = () => {
                     </Button>
                 </Col>
                 <Col>
-                    <img src={emailSvg} style={{height: 300, width: "100%" }}></img>
+                    <img src={emailSvg} style={{height: 300, width: "100%", paddingBottom: 24, padding:5 }}></img>
                 </Col>
             </div>
         </div>
