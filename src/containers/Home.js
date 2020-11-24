@@ -144,7 +144,7 @@ const Home = () => {
                             <Form.Control as="textarea" rows={3} />
                         </Form.Group>
                     </Form>
-                    <Button type="submit" style={{backgroundColor: "#57B894", border: "none", fontWeight: "600"}}>
+                    <Button type="submit" style={{backgroundColor: "#57B894", border: "none", fontWeight: "600", margin: 8}}>
                         Submit
                     </Button>
                 </Col>
