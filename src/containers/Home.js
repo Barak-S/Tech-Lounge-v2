@@ -132,7 +132,7 @@ const Home = () => {
       
         <div className="collection">
             <div style={{textAlign: "center"}}>
-                <Col xs={12} sm={12} md={6} lg={6} className="align-auto" style={{paddingTop: '5rem'}}>
+                <Col xs={12} sm={12} md={6} lg={6} className="align-auto" style={{paddingTop: '7rem'}}>
                     <h1 style={{ color: "#575A89", fontWeight: "600"}}>Let's work together</h1>
                     <Form style={{padding:'1rem', textAlign: "left"}}>
                         <Form.Group controlId="formBasicPassword">
